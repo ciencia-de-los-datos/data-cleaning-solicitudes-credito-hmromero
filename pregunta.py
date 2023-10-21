@@ -117,7 +117,7 @@ def clean_data():
     df.sexo=df.sexo.str.strip()
     df.tipo_de_emprendimiento=df.tipo_de_emprendimiento.str.strip()
     df.idea_negocio=df.idea_negocio.str.strip()
-    df.barrio=df.barrio.str.strip()
+    #df.barrio=df.barrio.str.strip()
     df.línea_credito=df.línea_credito.str.strip()
 
     df.fecha_de_beneficio=pd.to_datetime(df.fecha_de_beneficio, format="mixed", dayfirst=True)
@@ -128,3 +128,5 @@ def clean_data():
  
     return df
 
+dff=clean_data()
+lis=clean_data().barrio.value_counts().to_list()
